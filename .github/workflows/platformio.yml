@@ -1,0 +1,22 @@
+name: PlatformIO Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install platformio
+      - name: Run PlatformIO
+        run: |
+          cp src/auth.h-template src/auth.h
+          platformio run -e d1_mini

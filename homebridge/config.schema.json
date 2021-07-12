@@ -1,0 +1,26 @@
+{
+  "pluginAlias": "Esp8266OutletController",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Outlet"
+      },
+      "username": {
+        "title": "Device Username",
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "title": "Device Password",
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}
