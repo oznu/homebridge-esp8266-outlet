@@ -19,4 +19,4 @@ jobs:
       - name: Run PlatformIO
         run: |
           cp src/auth.h-template src/auth.h
-          platformio run -e d1_mini
+          platformio run -e esp01_1m
